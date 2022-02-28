@@ -1,2 +1,5 @@
-package numberbaseballgame;public enum BallStatus {
+package numberbaseballgame;
+
+public enum BallStatus {
+    STRIKE, BALL, OUT
 }
