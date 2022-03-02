@@ -27,4 +27,14 @@ public class Balls {
                 .findFirst()
                 .orElse(BallStatus.OUT);
     }
+
+    public PlayResult play(List<Integer> balls) {
+        Balls userBalls = new Balls(balls);
+        PlayResult playResult = new PlayResult();
+        for (Ball answer : answers) {
+            BallStatus ballStatus = userBalls.play(answer);
+            playResult.report(ballStatus);
+        }
+        return playResult;
+    }
 }
