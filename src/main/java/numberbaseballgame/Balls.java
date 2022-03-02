@@ -23,7 +23,7 @@ public class Balls {
     public BallStatus play(Ball ball) {
         return answers.stream()
                 .map(answer -> answer.play(ball))
-                .filter(status -> status != BallStatus.OUT)
+                .filter(BallStatus::isNotOut)
                 .findFirst()
                 .orElse(BallStatus.OUT);
     }
