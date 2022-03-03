@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class BallNumber {
 
-    private final static int MIN_NUM = 1;
+    private final static int MIN_NUM = 0;
     private final static int MAX_NUM = 9;
 
     private int num;
 
     public BallNumber(int num) {
         if (num < MIN_NUM || num > MAX_NUM) {
-            throw new IllegalArgumentException("볼 숫자는 1에서 9사이의 숫자여야 합니다.");
+            throw new IllegalArgumentException("볼 숫자는 0 이상 9 이하의 정수 합니다.");
         }
         this.num = num;
     }
